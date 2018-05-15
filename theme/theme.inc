@@ -18,6 +18,9 @@ function template_preprocess_islandora_plotit_display_plotit(&$variables) {
   module_load_include('inc', 'islandora_solr', 'includes/utilities');
   $module_path = drupal_get_path('module', 'islandora_plotit');
   $plotit_library_path = libraries_get_path('CWRC-Mapping-Timelines-Project');
+  $plotit_library_path_js = "$plotit_library_path/assets/javascripts";
+  $plotit_library_path_styles = "$plotit_library_path/assets/styles";
+
 
   /*
   drupal_add_html_head(
@@ -99,9 +102,6 @@ function template_preprocess_islandora_plotit_display_plotit(&$variables) {
 
   // Styles from - index.html https://github.com/cwrc/CWRC-Mapping-Timelines-Project/blob/f983df6a209f17c9d43d2b0e29ab031019d706e5/index.html
 
-  $plotit_library_path_js = "$plotit_library_path/assets/javascripts";
-  $plotit_library_path_styles = "$plotit_library_path/assets/styles";
-
   drupal_add_css("$plotit_library_path_styles/plot_it.css");
   drupal_add_css("$plotit_library_path_styles/components/filters/text_filter.css");
   drupal_add_css("$plotit_library_path_styles/components/filters/date_filter.css");
@@ -127,7 +127,7 @@ function template_preprocess_islandora_plotit_display_plotit(&$variables) {
 
   drupal_add_js("$plotit_library_path_js/lib/knockout-3.4.0.min.js");
   drupal_add_js("$plotit_library_path_js/lib/knockout-mapping-2.0.min.js");
-  drupal_add_js("http://maps.googleapis.com/maps/api/js?sensor=false");
+  drupal_add_js("//maps.googleapis.com/maps/api/js?sensor=false");
   drupal_add_js("$plotit_library_path_js/lib/spiderfy.min.js");
   drupal_add_js("$plotit_library_path_js/lib/FileSaver.js");
   drupal_add_js("$plotit_library_path_js/lib/native.history.min.js");
