@@ -127,7 +127,7 @@ function template_preprocess_islandora_plotit_display_plotit(&$variables) {
 
   drupal_add_js("$plotit_library_path_js/lib/knockout-3.4.0.min.js");
   drupal_add_js("$plotit_library_path_js/lib/knockout-mapping-2.0.min.js");
-  drupal_add_js("http://maps.googleapis.com/maps/api/js?sensor=false");
+  drupal_add_js("//maps.googleapis.com/maps/api/js?sensor=false");
   drupal_add_js("$plotit_library_path_js/lib/spiderfy.min.js");
   drupal_add_js("$plotit_library_path_js/lib/FileSaver.js");
   drupal_add_js("$plotit_library_path_js/lib/native.history.min.js");
